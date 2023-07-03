@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000000;
+        }
+        
+        .fleft {
+            float: left;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            background-color: yellow;
+            color: black;
+        }
+        li a:active {
+            background-color: purple;
+            color: white;
+        }
+        #p1{
+            width:25%;
+            color: black;
+            text-align: left;
+            font-size: large;
+            border: solid 4px blue;
+            padding-top:2px;
+            background-color: rgb(122, 142, 255);
+        }
+        #p2{
+            width:25%;
+            color: black;
+            text-align: left;
+            font-size: large;
+            border: solid 4px green;
+            padding-top:2px;
+            background-color: rgb(105, 248, 103);
+        }
+        .circle{
+            list-style-type: circle;
+        }
+        .lower-roman{
+            list-style-type: lower-roman;
+        }
+    </style>
+</head>
+<body>   
+    <ul class="nav">
+        <li class="fleft"><a href="#unordered">Unordered List</a></li>
+        <li class="fleft"><a href="#ordered">Ordered List</a></li>
+    </ul>
+    <p id="p1">This is an unordered list:</p>
+    <ul class="circle">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+    <p id="p2">This is an ordered list:</p>
+    <ul class="lower-roman">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+</body>
+</html>

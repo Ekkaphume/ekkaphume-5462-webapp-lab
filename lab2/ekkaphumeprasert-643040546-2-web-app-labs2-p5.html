@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table List Link</title>
+    <style>
+        .circle{
+            list-style-type: circle;
+        }
+        .square{
+            list-style-type: square;
+        }
+        #frame{
+            width:560;
+            height:315;
+        }
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: right;
+        }
+        .yellowmark{ 
+        background-color: yellow;
+        color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Covid 19</h1>
+    <p>Covid-19 (โควิด 19)affects different people in different 
+    ways. Most infected people will develop mild to moderate illness and 
+    recover without hospitalization. The statistics takes 
+    form <a href="https://www.worldometers.info/coronavirus/">Worldmeters</a> 
+    website for thefirst three that has the most of cases are shown in section 
+    <a href="#statistics">Statistics</a></p>
+    <p>Most common symptoms:</p>
+    <ul class="circle">
+        <li>fever</li>
+        <li>dry cough</li>
+        <li>tiredness</li>
+    </ul>
+    <p>Less common symptoms:</p>
+    <ul class="square">
+        <li>aches and pains</li>
+        <li>headache</li>
+        <li>loss of taste or smell</li>
+    </ul>
+    <br>
+    <h2>Coronavirus</h2>
+    <iframe id="frame" src="https://www.youtube.com/embed/aFPyYoGViZs" title="video"></iframe>
+    <h2 id="statistics">Statistics</h2>
+    <table>
+        <tr>
+            <th>Order</th>
+            <th>Country</th>
+            <th>Total Cases</th>
+            <th>New Cases</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td>world</td>
+            <td>22,043,483</td>
+            <td class="yellowmark" >+198,459</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>USA</td>
+            <td>5,612,027</td>
+            <td class="yellowmark" >+40,612</td>
+            
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Brazil</td>
+            <td>3,363,235</td>
+            <td class="yellowmark" >+23,038</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>India</td>
+            <td>2,701,604</td>
+            <td class="yellowmark">+54,288</td>
+        </tr>
+    </table>
+</body>
+</html>
