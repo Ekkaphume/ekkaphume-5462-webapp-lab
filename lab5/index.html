@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeNumberFinder</title>
+    <style>
+        @media(min-width: 600px) {
+            /* For tablets: */
+            li{
+                font-size: 20px;
+            }
+            .head{
+                font-size:30px
+            }
+            .head2{
+                font-size:25px
+            }
+          }
+        @media(min-width: 768px) {
+            /* For desktop: */
+            li{
+                font-size: 40px;
+            }
+            .head{
+                font-size:50px
+            }
+            .head2{
+                font-size:45px
+            }
+          }
+    </style>
+</head>
+<body>
+    <h1 class = "head" style="text-align: center;">Prime Numbers Finder!</h1>
+    <h2 class = "head2">Write the web app to prompt accepting for a positive integer number</h2>
+    <ul>
+        <li>If the entered text is not a positive integer number, then web app will keep asking for a number until valid postive integer is enterd</li>
+        <li>If the entered text is a positive integer, then the web app will add into a list of prime numbers</li>
+    </ul>
+
+    <h2 class = "head2">Hint:</h2>
+
+    <ol type="1">
+        <li>You may want to use loop with label</li>
+        <li>You may want to use array with push function</li>
+    </ol>
+    <script type="text/javascript">
+        var text_int
+
+        while(true){
+        
+        text_int = prompt("Please Enter Positive Intrger")
+        let n = Number(text_int)
+        if(isNumber(text_int) && isInt(n) && isPositive(n) === true){
+            showPrimes(n);
+            break;
+        }
+
+        else{
+            console.log(isNumber(text_int));
+            console.log(isInt(n));
+            console.log(isPositive(n));
+            
+        }
+        }
+        function isNumber(n) {
+            if (typeof n === "string") {
+                return !isNaN(n);
+            }
+        }
+
+        function isInt(n){
+            return n === n && n % 1 === 0;
+        }
+        
+        function isPositive(n){
+            return n === n && n > 0;
+        }
+        function showPrimes(n){
+            let array_primes = [];
+            let i = Number;
+            for(i=2;i<n;i++){
+                if(!isPrime(i)) continue;
+                array_primes.push(i); 
+                
+            }
+            alert("For n = " + text_int + " prime numbers are " + array_primes);
+        }
+        function isPrime(n){
+            for (let i = 2;i<n;i++){
+                if (n % i == 0) return false;
+            }
+            return true;
+        }
+        console.log(text_int);
+    </script>
+</body>
+</html>
