@@ -1,0 +1,177 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid 19</title>
+    <style>
+    .grid_container {
+        grid-template-rows: repeat(16);
+        display: grid;
+        width: 100%;
+        height: 100vh;
+      }
+    .fleft {
+        float: left;
+      }
+    .header_grid {
+        background-color:rgb(16, 172, 151) ;
+        color: white;
+        text-align: center;
+        font-size: 3em;
+        grid-column: 1/5;
+        grid-row: 1/2;
+    }
+    .nev_grid{
+        grid-column: 1/5;
+        grid-row: 2/3;
+        
+    }
+    .menu_grid{
+        background-color: rgb(177, 173, 173);
+        color: rgb(0, 0, 0);
+        grid-column: 1/3;
+        grid-row: 3/16;
+    }
+    .main_grid{
+        background-color: rgb(241, 212, 131);
+        color: rgb(0, 0, 0);
+        grid-column: 3/5;
+        grid-row: 3/16;
+        margin-left:0;
+    }
+    .nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 10;
+        overflow: hidden;
+        background-color: #313131;
+    }
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 12px 12px;
+        text-decoration: none;
+    }
+    li a:active {
+        background-color: rgb(255, 255, 255);
+        color: white;
+    }
+      @media (max-width: 600px) {
+        .fleft {
+          float: none;
+        }
+        .header_grid {
+            grid-column: 1/5;
+            grid-row: 1/2;
+        }
+        .nev_grid{
+            grid-column: 1/5;
+            grid-row: 2/3;
+        }
+        .menu_grid{
+            grid-column: 1/5;
+            grid-row: 3/4;
+        }
+        .main_grid{
+            grid-column: 1/5;
+            grid-row: 4/5;
+        }
+      }
+      #dmhtt{
+        text-align: center;
+      }
+      #north{
+        font-size:20px
+      }
+      #south{
+        font-size:20px
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid_container">
+      <div class="header_grid">Covid Stats 2021</div>
+      <div class="nev_grid">
+        <ul class="nav">
+          <li class="fleft"><a href="#north">North</a></li>
+          <li class="fleft"><a href="#south">South</a></li>
+        </ul>
+      </div>
+      <div class="menu_grid">
+        <p id="dmhtt">DMHTT</p>
+        <ul>
+          <li>D : Distance</li>
+          <li>M : Mask Wearing</li>
+          <li>H : Hand washing</li>
+          <li>T : Testing</li>
+          <li>T : Thai chana</li>
+        </ul>
+      </div>
+      <div class="main_grid">
+        <h3>Covid Stats In Different regions</h3>
+        <h2>stats on August 16,2021</h2>
+        <p id="north">East and North,Central</p>
+        <div>
+          <img src="../images/east-north.jpg" alt="Enorth" />
+          <img src="../images/central.jpg" alt="Central" />
+          <p>
+            At a time when Thailand is faced with a tough battle against COVID-19 and
+            new variants, it’s more important than ever for health authorities to
+            relay important messages to the Thai and non-Thai population – especially
+            with the two million workers from neighbouring countries including
+            Cambodia, Laos, and Myanmar. Health literacy plays a crucial role in
+            helping to reduce transmission and allows the public to understand how the
+            virus spreads and know how to protect themselves against it. The WHO and
+            implementing partners embarked on a project to translate a guide to
+            COVID-19 vaccines from Thai into English, Khmer, Lao, and Burmese. This
+            comprehensive guide provides details about the virus and its variants as
+            well as vaccines – the key to ending this pandemic.
+        </p>
+        <p>
+          A heartfelt “thank you” to all those involved in this ambitious yet highly
+          important mission. Please do your part by sharing information about this
+          free guide to your family and circle of friends and together, we will
+          reach the finish line with full knowledge about COVID-19.
+        </p>
+        <p>
+          Thai, English, Khmer, Lao, and Burmese versions are available for free
+          download.
+        </p>
+        <br /><br /><br /><br />
+        <p>
+          BANGKOK: Thailand could see coronavirus cases double to 45,000 per day by
+          early next month, even with current lockdown measures in place, its
+          COVID-19 task force said on Friday (Aug 13), as authorities urged people
+          to stay home to reduce infection risks.
+        </p>
+        <p>
+          Thailand has been struggling with its worst outbreak so far, with a daily
+          average of 20,000 new infections and 180 deaths in the past week, compared
+          to 70 new cases and single-digit daily fatalities less than five months
+          ago.
+        </p>
+        <p>
+          Current travel restrictions and containment measures in place over the
+          past month have yet to make an impact, the task force said.
+        </p>
+        <p>
+          A record 23,418 new cases were announced on Friday, taking overall cases
+          to 863,189, with 7,126 deaths.
+        </p>
+        <p>
+          "The lockdown has been 20 per cent effective but the infections continue
+          to rise, projected to reach about 45,000 cases per day by the start of or
+          mid-September," spokesman Taweesin Wisanuyothin told a news conference.
+        </p>
+        </div>
+        <p id="south">West and South,Northeast</p>
+        <div>
+            <img src="../images/west-south.jpg" alt="West" />
+            <img src="../images/northeast.jpg" alt="North" />
+          </div>
+      </div>
+    </div>
+
+  </body>
+</html>
