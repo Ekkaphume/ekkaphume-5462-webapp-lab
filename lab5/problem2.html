@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="p1-2.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h2>Statistic Calculator!</h2>
+    <h1 class="head">Write the web app to promp accepting for positive integers until the user enters a negative integer</h1>
+    <ol type="1">
+      <li>If the user entered text is not a positive number, then the web app will keep asking for a number until the valid positive integer is entered</li>
+      <li>If the user entered text is a negative number, then the web app will show the statistics (average,min,max) of all entered positive integers</li>
+    </ol>
+    <h1 class="head2">Note:</h1>
+    <ol type="2">
+      <li>You need to implement function to check whether an entered text is a positive integer or not and whether an entered text is a negative integer or not</li>
+      <li>You need to implement functions to compute average,min,max of a list of integers</li>
+    </ol>
+
+    <script>
+      let list = [];
+      function readInput() {
+        while (true) {
+          text_int = prompt("Please Enter Positive Intrger");
+          let n = Number(text_int);
+          if (
+            isNumber(text_int) &&
+            isInt(n) === true &&
+            isPositive(n) === false
+          ) {
+            displayStats(list);
+            console.log("is positive");
+            break;
+          } else {
+            if (isNumber(text_int) && isInt(n) && isPositive(n) === true) {
+              console.log("is legal input");
+              list.push(Number(text_int));
+            } else {
+              console.log("not count");
+            }
+          }
+        }
+      }
+      function isNumber(n) {
+        if (typeof n === "string") {
+          return !isNaN(n);
+        }
+      }
+
+      function isInt(n) {
+        return n === n && n % 1 === 0;
+      }
+
+      function isPositive(n) {
+        return n === n && n > 0;
+      }
+      function displayStats(list) {
+
+        const sum = list.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        console.log(sum);
+        console.log(list);
+        const avg = list.length > 0 ? sum / list.length : 0;
+        const min = list.length > 0 ? Math.min(...list) : 0;
+        const max = list.length > 0 ? Math.max(...list) : 0;
+        alert("For the list " + list + " the average is " + avg.toFixed(2) + ", the minimum is " + min + ", and the maximum is " + max)
+      }
+      readInput();
+    </script>
+  </body>
+</html>

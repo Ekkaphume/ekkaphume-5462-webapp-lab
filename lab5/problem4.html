@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Song(title, artist){
+            this.title = title;
+            this.artist = artist;
+            Song.prototype.play = function(){
+                console.log('Playing: ' +this.title + ' by ' + this.artist)
+            }
+        }
+        let song1 = new Song("lisa",'money')
+        let song2 = new Song("ระยะหัวใจ",'Flukie')
+        song1.play();
+        song2.play();
+    </script>
+</body>
+</html>
