@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON API Example</title>
+</head>
+<body>
+    <div>List of User Names and Locations</div>
+    <ol id="name"></ol>
+
+    <script>
+        function fetchData() {
+            fetch('./places.json')
+                .then(response => response.json())
+                .then(data => {
+                    const ulElem = document.querySelector('#name');
+
+                    for (let i = 0; i < data.results.length; i++) {
+                        const liElement = document.createElement('li');
+                        const divName = document.createElement('div');
+                        const divLocation = document.createElement('div');
+
+                        divName.textContent = 'Name: ' + data.results[i].name;
+                        divLocation.textContent = 'Location: ' + data.results[i].geometry.location.lat + ', ' + data.results[i].geometry.location.lng;
+                        divName.style.color = 'blue';
+                        divLocation.style.color = 'green';
+
+                        liElement.appendChild(divName);
+                        liElement.appendChild(divLocation);
+                        ulElem.appendChild(liElement);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        window.onload = fetchData;
+    </script>
+</body>
+</html>

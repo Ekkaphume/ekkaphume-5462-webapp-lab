@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Data Display</title>
+</head>
+<body>
+    <h1>Reading Student Information</h1>
+    <ol id="student-list"></ol>
+
+    <script>
+       fetch('student.json')
+       .then(response => {
+           return response.json();
+       })
+       .then((data) => {
+           const studentsData = data.wclass;
+           const studentList = document.getElementById('student-list');
+
+           studentsData.forEach((student) => {
+               const studentInfo = student.student;
+               const studentItem = document.createElement('div');
+
+               studentItem.innerHTML = ` ${studentInfo["@attributes"].id}  Name:<strong> ${studentInfo.name} </strong> Skill: <i>${studentInfo.skill}</i> <br>`;
+
+               studentList.appendChild(studentItem);
+           });
+       })
+       .catch(err => {
+           alert('Error');
+       });
+    </script>
+</body>
+</html>
